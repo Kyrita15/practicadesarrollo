@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calacalí - Un Tesoro en Ecuador</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <header id="navbar">
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#historia">Historia</a></li>
+                <li><a href="#pila">Pila de San Francisco</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección de inicio con imagen de fondo -->
+    <section id="inicio">
+        <div class="intro-content">
+            <h1 id="welcome-message">Bienvenidos a Calacalí</h1>
+            <p>Explora la belleza, cultura y tradiciones de este pintoresco pueblo ubicado en la Sierra ecuatoriana.</p>
+            <p>¡Bienvenido a la historia de Calacalí!</p>
+        </div>
+        <!-- Aside con información adicional solo visible en pantallas grandes -->
+        <aside id="info-aside">
+            <h3>Información Adicional</h3>
+            <p>Calacalí es uno de los pocos lugares del mundo que se encuentra exactamente en la línea ecuatorial, lo que lo convierte en un destino único para explorar el equilibrio geográfico de nuestro planeta.</p>
+        </aside>
+    </section>
+    
+    
+    
+
+    <!-- Galería con cuadro emergente -->
+    <section id="galeria">
+        <h2>Galería</h2>
+        <div class="gallery">
+            <img src="iglesia.png" alt="Iglesia de Calacalí" onclick="showDescription('Iglesia de Calacalí')">
+            <img src="monumento.png" alt="Monumento Ecuatorial en Calacalí" onclick="showDescription('Monumento Ecuatorial en Calacalí')">
+            <img src="paisaje.png" alt="Paisaje montañoso de Calacalí" onclick="showDescription('Paisaje montañoso de Calacalí')">
+        </div>
+        <!-- Cuadro emergente (modal) para mostrar descripciones -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeDescription()">&times;</span>
+                <p id="image-description"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Historia con imagen -->
+    <section id="historia">
+        <h2>Historia</h2>
+        <div class="historia-content">
+            <img src="cali.png" alt="Imagen histórica de Calacalí">
+            <p>Calacalí es un lugar lleno de historia. Desde su fundación en el siglo XVI, ha sido un sitio de importancia cultural y patrimonial en Ecuador, destacándose por su ubicación en la línea ecuatorial y su iglesia colonial.</p>
+        </div>
+    </section>
+
+    <!-- Nueva Sección: Pila de San Francisco -->
+    <section id="pila">
+        <h2>Pila de San Francisco</h2>
+        <div class="pila-content">
+            <img src="pileta.png" alt="Imagen de la Pila de San Francisco" class="pila-image">
+            <p>La histórica Pila de San Francisco, que una vez adornó el centro de Quito, fue trasladada a Calacalí. Este símbolo representa el legado y la conexión de Calacalí con la historia colonial ecuatoriana.</p>
+        </div>
+    </section>
+    
+
+    <!-- Contacto con validación -->
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>Para más información sobre visitas, eventos y actividades en Calacalí, contáctanos.</p>
+        <div class="form-container">
+            <form>
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+    
+    
+
+    <script src="java.js"></script>
+</body>
+</html>

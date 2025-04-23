@@ -1,0 +1,321 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Barra de navegación fija con cambio de color al hacer scroll */
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    transition: background-color 0.3s;
+    z-index: 1000;
+}
+
+#navbar nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+#navbar nav ul li {
+    margin: 0 15px;
+}
+
+#navbar nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+#navbar.scrolled {
+    background-color: #555;
+}
+
+/* Sección de inicio con imagen de fondo completa */
+#inicio {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    background: url('cielo.png') no-repeat center center/cover; /* Imagen de fondo aplicada directamente */
+    overflow: hidden;
+}
+
+
+/* Sección de la Pila de San Francisco */
+#pila {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#pila h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Contenedor para la imagen y el texto */
+.pila-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+/* Imagen de la Pila */
+.pila-image {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+}
+
+/* Estilo del párrafo */
+.pila-content p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    max-width: 600px;
+    color: #333;
+}
+
+/* Media query para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .pila-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .pila-image {
+        max-width: 100%;
+    }
+
+    .pila-content p {
+        max-width: 100%;
+    }
+}
+
+
+/* Contenido de introducción centrado sin fondo en recuadro */
+.intro-content {
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo semitransparente negro */
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    text-align: center;
+    z-index: 1;
+}
+
+#inicio h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+#inicio p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+/* Aside con fondo semitransparente para pantallas grandes */
+#info-aside {
+    position: absolute;
+    top: 20%;
+    right: 20px;
+    width: 250px;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco con transparencia */
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    color: #333;
+    z-index: 1;
+}
+
+#info-aside h3 {
+    margin-bottom: 10px;
+}
+
+/* Responsive: ocultar el aside en pantallas pequeñas */
+@media (max-width: 768px) {
+    #info-aside {
+        display: none;
+    }
+}
+
+/* Galería con animación de zoom */
+#galeria {
+    background-color: #ddd;
+    padding: 60px 20px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    padding-top: 20px;
+}
+
+.gallery img {
+    cursor: pointer;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+/* Modal para descripciones en la galería */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+    z-index: 1001;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    text-align: center;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Historia y Pila de San Francisco */
+.historia-content, .pila-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.historia-content img, .pila-content img {
+    width: 25%;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+
+
+/* Espaciado para separar la sección de contacto de la barra de navegación */
+#contacto {
+    padding: 60px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+/* Estilo del título y párrafo de contacto */
+#contacto h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#contacto p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Contenedor del formulario con fondo semitransparente */
+.form-container {
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente */
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para el formulario */
+#contacto form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Estilo para los campos de entrada */
+#contacto input[type="text"],
+#contacto input[type="email"] {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+#contacto input[type="text"]:focus,
+#contacto input[type="email"]:focus {
+    border-color: #555;
+}
+
+/* Estilo para el botón de envío */
+#contacto button {
+    padding: 12px 25px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contacto button:hover {
+    background-color: #555;
+}
+
+/* Media Query para dispositivos móviles */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    #contacto h2 {
+        font-size: 1.5em;
+    }
+
+    #contacto p {
+        font-size: 1em;
+    }
+
+    #contacto input[type="text"],
+    #contacto input[type="email"] {
+        max-width: 100%;
+    }
+}
